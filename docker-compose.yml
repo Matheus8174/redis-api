@@ -1,0 +1,24 @@
+version: "3.3"
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  redis-test:
+    image: bitnami/redis:latest
+    networks:
+      - app-network
+    env_file:
+      - './.env.test'
+    ports:
+      - 6379:6379
+
+  redis:
+    image: bitnami/redis:latest
+    env_file:
+      - './.env'
+    networks:
+      - app-network
+    ports:
+      - 6379:6379

@@ -1,0 +1,15 @@
+node_modules
+
+npm-debug.log
+
+.git
+
+.vscode
+
+.husky
+
+*.drawio
+
+.editorconfig
+
+vite.*.ts
